@@ -1,7 +1,7 @@
-FROM node:18-alpine
+FROM node:20-alpine
 
 WORKDIR /app
-COPY ./package.json .
+COPY ./package.json ./pnpm-lock.yaml ./
 RUN npm install --location=global pnpm
 RUN pnpm install
 COPY . .
