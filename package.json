@@ -1,6 +1,6 @@
 {
 	"name": "gh-pinned-repos-api",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "an api service for retrieving pinned repos on GitHub profile.",
 	"main": "server.js",
 	"scripts": {
