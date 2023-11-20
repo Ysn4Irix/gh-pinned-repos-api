@@ -143,7 +143,7 @@ const getRepoWebsite = async repo => {
 	const html = await axios(repo)
 	const $ = cheerio.load(html.data)
 	const demo = $(
-		'#repo-content-pjax-container > div > div > div.Layout.Layout--flowRow-until-md.Layout--sidebarPosition-end.Layout--sidebarPosition-flowRow-end > div.Layout-sidebar > div > div.BorderGrid-row.hide-sm.hide-md > div > div.my-3.d-flex.flex-items-center > span > a'
+		'#repo-content-pjax-container > div > div > div.Layout.Layout--flowRow-until-md.Layout--sidebarPosition-end.Layout--sidebarPosition-flowRow-end > div.Layout-sidebar > div > div:nth-child(1) > div > div > div.my-3.d-flex.flex-items-center > span > a'
 	).attr('href')
 
 	return demo
